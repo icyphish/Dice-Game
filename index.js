@@ -20,7 +20,7 @@ const diceImages = [
 const changeImagePlayer1 = document.querySelector(".img1");
 const changeImagePlayer2 = document.querySelector(".img2");
 
-//change player1's image based on the random number (setAttribute to the file path location in the array)
+//change player1's image based on the random number (setAttribute to get the file path in diceImages' array)
 if (player1 >= 1 && player1 <= 6) {
     console.log(player1);
     changeImagePlayer1.setAttribute("src", diceImages[player1 - 1]);
@@ -28,7 +28,7 @@ if (player1 >= 1 && player1 <= 6) {
     console.log("Invalid number for player 1");
 }
 
-//change player2's image based on the random number (setAttribute to the file path location in the array)
+//change player2's image based on the random number (setAttribute to get the file path in diceImages' array)
 if (player2 >= 1 && player2 <= 6) {
     console.log(player2);
     changeImagePlayer2.setAttribute("src", diceImages[player2 - 1]);
@@ -38,11 +38,11 @@ if (player2 >= 1 && player2 <= 6) {
 
 //Result of the roll
 if (player1 === player2) {
-    document.querySelector("h1").innerHTML = 'Draw';
+    document.querySelector(".result").innerHTML = 'Draw';
 } else if (player1 > player2) {
-    document.querySelector("h1").innerHTML = 'Player1 Wins';
+    document.querySelector(".result").innerHTML = 'Player1 Wins';
 } else if (player1 < player2) {
-    document.querySelector("h1").innerHTML = 'Player2 Wins';
+    document.querySelector(".result").innerHTML = 'Player2 Wins';
 }
 
 //Create a reference to the refresh button
